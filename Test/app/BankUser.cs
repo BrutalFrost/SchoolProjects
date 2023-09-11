@@ -1,9 +1,8 @@
 
 class BankUser {
-    private static int balance;
-    private static string name;
-    public BankUser (string newName) {
-        name = newName;
+    int balance;
+    public string name;
+    public BankUser () {
         balance = 500;
     }
     
@@ -16,6 +15,9 @@ class BankUser {
 
     public int GetBalance () {
         return balance;
+    }
+    public void SetName (string newName) {
+        this.name = newName;
     }
     public string GetName () {
         return name;

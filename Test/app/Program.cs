@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using System.Formats.Asn1;
+
 class TestApp {
 
     public static void Main() {
@@ -22,7 +24,7 @@ class TestApp {
             Console.WriteLine();
             
             choice = int.Parse(Console.ReadLine());
-
+            
             switch (choice) {
                 case 1:
                     GissaTalet();
@@ -236,11 +238,54 @@ class TestApp {
     }
 
 
-    static void BankSystem () {
-        BankUser testUser = new BankUser("TestUser");
-        Console.WriteLine("User name: " + testUser.GetName());
-        Console.WriteLine("User balance: " + testUser.GetBalance());
-        return;
+    static void BankSystem()
+    {
+        List<BankUser> userList = new List<BankUser>();
+        while (true)
+        {
+            Console.WriteLine("What do you want to do?");
+            Console.WriteLine("1. Login");
+            Console.WriteLine("2. Registrera nytt konto");
+            Console.WriteLine("3. Exit");
+            Console.WriteLine("4. Debug");
+            
+            int answer = int.Parse(Console.ReadLine());
+            if (answer == 1)
+            {
+                Console.WriteLine("Vad är ditt namn? (Case sensitive)");
+                string currentUser = Console.ReadLine();
+                for (int i = 0; i < userList.Count; i++)
+                {
+                    if (currentUser == userList[i].GetName())
+                    {
+                        Console.WriteLine("YAY");
+                        break;
+                    }
+                }
+            }
+            else if (answer == 2)
+            {
+                Console.WriteLine("Skriv nytt namn");
+                string newName = Console.ReadLine();
+                BankUser testUser2 = new BankUser();
+                testUser2.SetName(newName);
+                userList.Add(testUser2);
+
+                // Debugging output to check if testUser2 was added successfully
+                Console.WriteLine("Added testUser2 with name: " + newName);
+            }
+            else if (answer == 3)
+            {
+                return;
+            }
+            else if (answer == 4)
+            {
+                for (int i = 0; i < userList.Count; i++)
+                {
+                    Console.WriteLine("User " + i + ": " + userList[i].GetName());
+                }
+            }
+        }
     }
     
 
