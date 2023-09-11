@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\School Code\\OPA23\\Test\\app\\app.csproj": {}
+    "C:\\School Code\\OPA23\\SchoolProjects\\Test\\app\\app.csproj": {}
   },
   "projects": {
-    "C:\\School Code\\OPA23\\Test\\app\\app.csproj": {
+    "C:\\School Code\\OPA23\\SchoolProjects\\Test\\app\\app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\School Code\\OPA23\\Test\\app\\app.csproj",
+        "projectUniqueName": "C:\\School Code\\OPA23\\SchoolProjects\\Test\\app\\app.csproj",
         "projectName": "app",
-        "projectPath": "C:\\School Code\\OPA23\\Test\\app\\app.csproj",
+        "projectPath": "C:\\School Code\\OPA23\\SchoolProjects\\Test\\app\\app.csproj",
         "packagesPath": "C:\\Users\\hampu\\.nuget\\packages\\",
-        "outputPath": "C:\\School Code\\OPA23\\Test\\app\\obj\\",
+        "outputPath": "C:\\School Code\\OPA23\\SchoolProjects\\Test\\app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hampu\\AppData\\Roaming\\NuGet\\NuGet.Config"

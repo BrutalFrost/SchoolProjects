@@ -15,7 +15,8 @@ class TestApp {
             Console.WriteLine("4. Simple Triangle");
             Console.WriteLine("5. Reverse simple triangle");
             Console.WriteLine("6. Reaktionspelet");
-
+            Console.WriteLine("7. Banksystem");
+            
 
             Console.WriteLine("0. Exit");
             Console.WriteLine();
@@ -40,6 +41,9 @@ class TestApp {
                     break;
                 case 6:
                     Reaktionsspelet();
+                    break;
+                case 7:
+                    BankSystem();
                     break;
                 case 0: 
                 Environment.Exit(0);
@@ -204,6 +208,7 @@ class TestApp {
         return; 
     }
 //--------------------------------------------------------------------------------------------
+// Komplexa uppgifter 4
     static void Reaktionsspelet () {
         
         Random rnd = new Random();
@@ -230,6 +235,13 @@ class TestApp {
         return;
     }
 
+
+    static void BankSystem () {
+        BankUser testUser = new BankUser("TestUser");
+        Console.WriteLine("User name: " + testUser.GetName());
+        Console.WriteLine("User balance: " + testUser.GetBalance());
+        return;
+    }
     
 
 }
