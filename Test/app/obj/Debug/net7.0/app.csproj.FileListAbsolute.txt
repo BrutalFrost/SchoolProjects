@@ -1,0 +1,14 @@
+C:\School Code\OPA23\Test\app\bin\Debug\net7.0\app.exe
+C:\School Code\OPA23\Test\app\bin\Debug\net7.0\app.deps.json
+C:\School Code\OPA23\Test\app\bin\Debug\net7.0\app.runtimeconfig.json
+C:\School Code\OPA23\Test\app\bin\Debug\net7.0\app.dll
+C:\School Code\OPA23\Test\app\bin\Debug\net7.0\app.pdb
+C:\School Code\OPA23\Test\app\obj\Debug\net7.0\app.GeneratedMSBuildEditorConfig.editorconfig
+C:\School Code\OPA23\Test\app\obj\Debug\net7.0\app.AssemblyInfoInputs.cache
+C:\School Code\OPA23\Test\app\obj\Debug\net7.0\app.AssemblyInfo.cs
+C:\School Code\OPA23\Test\app\obj\Debug\net7.0\app.csproj.CoreCompileInputs.cache
+C:\School Code\OPA23\Test\app\obj\Debug\net7.0\app.dll
+C:\School Code\OPA23\Test\app\obj\Debug\net7.0\refint\app.dll
+C:\School Code\OPA23\Test\app\obj\Debug\net7.0\app.pdb
+C:\School Code\OPA23\Test\app\obj\Debug\net7.0\app.genruntimeconfig.cache
+C:\School Code\OPA23\Test\app\obj\Debug\net7.0\ref\app.dll
