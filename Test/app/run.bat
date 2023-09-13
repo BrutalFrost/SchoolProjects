@@ -1,0 +1,2 @@
+open cmd
+dotnet run

@@ -237,43 +237,73 @@ class TestApp {
         return;
     }
 
-
+//--------------------------------------------------------------------------------------------
+// Komplexa uppgifter 5
     static void BankSystem()
     {
-        List<BankUser> userList = new List<BankUser>();
+        List<BankUser> userList = new List<BankUser>(); // List of users
+        // Main loop
         while (true)
         {
+            Console.WriteLine();
             Console.WriteLine("What do you want to do?");
             Console.WriteLine("1. Login");
             Console.WriteLine("2. Registrera nytt konto");
             Console.WriteLine("3. Exit");
-            Console.WriteLine("4. Debug");
             
             int answer = int.Parse(Console.ReadLine());
+            // Login
             if (answer == 1)
             {
                 Console.WriteLine("Vad är ditt namn? (Case sensitive)");
                 string currentUser = Console.ReadLine();
+                // For loop to search for and user access a specified user
                 for (int i = 0; i < userList.Count; i++)
                 {
+                    // Checks if the specified user is in the list
                     if (currentUser == userList[i].GetName())
                     {
-                        Console.WriteLine("YAY");
+                        while(true) {
+                            Console.WriteLine("What do you wanna do?");
+                            Console.WriteLine("1. Deposit");
+                            Console.WriteLine("2. Whitdraw");
+                            Console.WriteLine("3. Balance");
+                            Console.WriteLine("4. Return");
+                            answer = int.Parse(Console.ReadLine());
+
+                            if (answer == 1) {
+                                Console.WriteLine("Hur mycket vill du lägga in?");
+                                userList[i].AddBalance(int.Parse(Console.ReadLine()));
+                            } else if (answer == 2) {
+                                Console.WriteLine("Hur mycket vill du ta ut?");
+                                userList[i].RemoveBalance(int.Parse(Console.ReadLine()));
+                            } else if (answer == 3) {
+                                Console.WriteLine($"Current balance: {userList[i].GetBalance()}");
+                            } else if (answer == 4){
+                                break;
+                            }
+                        }
+                        break;
+                    // Incase user inputs a non registered name
+                    } else {
+                        Console.WriteLine("Det finns inget konto med detta namn: ");
                         break;
                     }
                 }
             }
+            //Login
             else if (answer == 2)
             {
                 Console.WriteLine("Skriv nytt namn");
-                string newName = Console.ReadLine();
-                BankUser testUser2 = new BankUser();
-                testUser2.SetName(newName);
+                string newName = Console.ReadLine(); // Name to registered
+                BankUser testUser2 = new BankUser(); // Temp user to be added to the list
+                testUser2.SetName(newName); 
                 userList.Add(testUser2);
 
                 // Debugging output to check if testUser2 was added successfully
                 Console.WriteLine("Added testUser2 with name: " + newName);
             }
+            // Exit bank system
             else if (answer == 3)
             {
                 return;

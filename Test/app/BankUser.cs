@@ -6,11 +6,14 @@ class BankUser {
         balance = 500;
     }
     
-    public void SetBalance (int addAmount) {
+    public void AddBalance (int addAmount) {
         
         balance = balance + addAmount;
         
         return;
+    }
+    public void RemoveBalance (int removeAmount) {
+        balance = balance - removeAmount;
     }
 
     public int GetBalance () {
